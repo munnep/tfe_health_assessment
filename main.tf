@@ -2,7 +2,7 @@ resource "null_resource" "a_single_resource" {}
 
 check "check_url_succeed" {
   data "http" "check_url_succeed" {
-    url = "https://terraform.io"
+    url = "https://www.terraform.io"
   }
 
   assert {
@@ -13,7 +13,7 @@ check "check_url_succeed" {
 
 check "check_url_fail" {
   data "http" "check_url_fail" {
-    url = "https://terraform_patrick.io"
+    url = "https://www.terraform_fail_url.io"
   }
 
   assert {
